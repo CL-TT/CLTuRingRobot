@@ -1,0 +1,153 @@
+::-webkit-scrollbar {
+  width: 2px;
+  /* background-color: red; */
+}
+
+div,
+p,
+input,
+button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+}
+
+
+/**************最外层的div***********/
+.wrapper {
+  width: 300px;
+  height: 500px;
+  border: 1px solid #359aff;
+  margin: 40px auto;
+  border-radius: 5px;
+}
+
+/* 联系人部分 */
+.wrapper p {
+  width: 100%;
+  height: 36px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 36px;
+  background-color: #359aff;
+  color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+
+/***********聊天内容区*********/
+.wrapper .content {
+  width: 100%;
+  height: calc(100% - 36px - 50px);
+  overflow-y: scroll;
+}
+
+/* 图片的样式 */
+.wrapper .content .pic {
+  width: 36px;
+  height: 36px;
+  border-radius: 5px;
+  margin: 6px 4px;
+  background-size: 100% 100%;
+}
+
+.wrapper .content .mine {
+  width: 100%;
+  float: right;
+  position: relative;
+}
+
+.wrapper .content .robot {
+  width: 100%;
+  float: left;
+  position: relative;
+}
+
+/* 图片样式 */
+.wrapper .content .mine>.pic {
+  float: right;
+  background-image: url("./image/t1.jpg");
+}
+
+.wrapper .content .robot>.pic {
+  float: left;
+  background-image: url("./image/t2.jpg");
+}
+
+/* 文字的样式 */
+.wrapper .content .text {
+  max-width: 182px;
+  /* border: 1px solid yellow; */
+  padding: 4px 8px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.wrapper .content .mine .text {
+  float: right;
+  margin-right: 5px;
+  background-color: #29da81;
+}
+
+.wrapper .content .mine .text::after {
+  content: "";
+  position: absolute;
+  right: 41px;
+  top: 18px;
+  width: 0px;
+  height: 0px;
+  border: 5px solid #29da81;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+}
+
+.wrapper .content .robot .text {
+  float: left;
+  margin-left: 6px;
+  background-color: #0078f0;
+}
+
+.wrapper .content .robot .text::after {
+  content: "";
+  position: absolute;
+  left: 42px;
+  top: 18px;
+  width: 0;
+  height: 0;
+  border: 5px solid #0078f0;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* 发送消息框的样式 */
+.wrapper .mes {
+  width: 100%;
+  height: 50px;
+  border-top: 1px solid #0078f0;
+}
+
+.wrapper .mes input {
+  width: 220px;
+  height: 26px;
+  margin: 10px 8px;
+  outline-color: #0078f0;
+}
+
+/* 按钮样式 */
+.wrapper .mes button {
+  width: 42px;
+  height: 27px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #0078f0;
+  color: white;
+  border: none;
+  outline: none;
+}
